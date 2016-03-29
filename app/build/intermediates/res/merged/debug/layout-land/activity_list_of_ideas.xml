@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:weightSum="8">
+
+    <fragment android:name="info.androidhive.loginandregistration.activity.ListOfUsersFragment"
+        android:id="@+id/TodoListFragment"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="3"/>
+
+    <FrameLayout
+        android:id="@+id/detail"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="5">
+    </FrameLayout>
+
+</LinearLayout><!-- From: file:/C:/Users/Palo/AndroidStudioProjects/AndroidLoginAndRegistration/app/src/main/res/layout-land/activity_list_of_ideas.xml -->

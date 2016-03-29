@@ -1,0 +1,35 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="60dp"
+        tools:context=".MainActivity">
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/zoznamB"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:id="@+id/tasklist"
+            android:layout_marginBottom="60px"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/addTaskB"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:id="@+id/addtask"
+            android:layout_marginBottom="60px"/>
+
+    </LinearLayout>
+</ScrollView>
