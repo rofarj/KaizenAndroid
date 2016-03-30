@@ -16,28 +16,52 @@
         android:background="#2e3237">
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/bg_login">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/bg_login">
 
-            <TextView
-                android:layout_weight="1"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_width="fill_parent"
-                android:layout_height="100px"
-                android:textColor="@color/text_color"
-                android:text="@string/taskNameFragment"/>
+        <TextView
+            android:layout_weight="3"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="100px"
+            android:textColor="@color/text_color"
+            android:text="@string/taskNameFragment"/>
 
-            <TextView
-                android:id="@+id/nazovUlohy"
-                android:layout_weight="1"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_width="fill_parent"
-                android:textColor="@color/text_color"
-                android:layout_height="200px" />
+        <TextView
+            android:id="@+id/nazovUlohy"
+            android:layout_weight="2"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="fill_parent"
+            android:textColor="@color/text_color"
+            android:layout_height="wrap_content" />
 
-        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/bg_login">
+
+        <TextView
+            android:layout_weight="3"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="100px"
+            android:textColor="@color/text_color"
+            android:text="@string/priezvisko"/>
+
+        <TextView
+            android:id="@+id/priezvisko"
+            android:layout_weight="2"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="fill_parent"
+            android:textColor="@color/text_color"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -47,16 +71,16 @@
 
 
             <TextView
-                android:layout_weight="1"
+                android:layout_weight="3"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="fill_parent"
                 android:textColor="@color/text_color"
                 android:layout_height="200px"
-                android:text="@string/taskCathegoryFragment"/>
+                android:text="@string/phone"/>
 
             <TextView
-                android:id="@+id/kategoriaUlohy"
-                android:layout_weight="1"
+                android:id="@+id/telephone"
+                android:layout_weight="2"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/text_color"
                 android:layout_width="fill_parent"
@@ -72,16 +96,16 @@
             android:background="@color/bg_login">
 
             <TextView
-                android:layout_weight="1"
+                android:layout_weight="3"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="fill_parent"
                 android:layout_height="200px"
                 android:textColor="@color/text_color"
-                android:text="@string/taskDateFragment"/>
+                android:text="@string/company"/>
 
             <TextView
-                android:id="@+id/datumUlohy"
-                android:layout_weight="1"
+                android:id="@+id/comp"
+                android:layout_weight="2"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="fill_parent"
                 android:textColor="@color/text_color"
@@ -95,16 +119,16 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_weight="1"
+                android:layout_weight="3"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="fill_parent"
                 android:layout_height="200px"
                 android:textColor="@color/text_color"
-                android:text="@string/taskPriority"/>
+                android:text="@string/dateRegister"/>
 
             <TextView
-                android:id="@+id/prioritaUlohy"
-                android:layout_weight="1"
+                android:id="@+id/reg"
+                android:layout_weight="2"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="fill_parent"
                 android:textColor="@color/text_color"
@@ -114,11 +138,14 @@
 
 
 
+
         <Button
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
             android:id="@+id/vymazat"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@color/btn_login_bg"
+            android:textColor="@color/btn_login"
             android:text="@string/taskDeleteButton" />
     </LinearLayout>
 </ScrollView><!-- From: file:/C:/Users/Palo/AndroidStudioProjects/AndroidLoginAndRegistration/app/src/main/res/layout/item_in_list_fragment2.xml -->

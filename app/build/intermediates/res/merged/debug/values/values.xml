@@ -367,6 +367,7 @@
     <eat-comment/>
     <string name="company">Company</string>
     <string name="costs">Costs</string>
+    <string name="dateRegister">Registration</string>
     <string name="hello_world">Hello world!</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
@@ -377,6 +378,7 @@
     <string name="os">Old state</string>
     <string name="phone">Phone</string>
     <string name="photo">Take a photo now</string>
+    <string name="priezvisko">Surname:</string>
     <!-- From: file:/C:/Users/Palo/AndroidStudioProjects/AndroidLoginAndRegistration/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>

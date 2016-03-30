@@ -14,8 +14,10 @@ public class UserItem implements Parcelable {
     private int _id;
     private String name;
     private String surname;
-    private String 	user_email;
+    private String user_email;
     private String company;
+    private String date;
+    private String phone;
 
     /**
      * prazdny konstruktor
@@ -41,6 +43,8 @@ public class UserItem implements Parcelable {
         surname = in.readString();
         user_email = in.readString();
         company = in.readString();
+        phone = in.readString();
+        date = in.readString();
     }
 
     /**
@@ -113,6 +117,30 @@ public class UserItem implements Parcelable {
         this.company = pri;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    /**
+     * nastavi prioritu
+     * @param pri
+     */
+    public void setPhone(String pri) {
+        this.phone = pri;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    /**
+     * nastavi prioritu
+     * @param pri
+     */
+    public void setDate(String pri) {
+        this.date = pri;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -127,6 +155,8 @@ public class UserItem implements Parcelable {
         dest.writeString(surname);
         dest.writeString(user_email);
         dest.writeString(company);
+        dest.writeString(phone);
+        dest.writeString(date);
     }
 
     public static final Parcelable.Creator<UserItem> CREATOR = new Parcelable.Creator<UserItem>() {

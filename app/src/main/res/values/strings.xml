@@ -33,6 +33,7 @@
     <string name="taskDescription">Advantages</string>
     <string name="taskAddButton">Send</string>
     <string name="taskNameFragment">Name:</string>
+    <string name="priezvisko">Surname:</string>
     <string name="taskCathegoryFragment">Actual State:</string>
     <string name="taskDateFragment">Improved state:</string>
     <string name="taskTimeFragment">Čas:</string>
@@ -59,4 +60,5 @@
     <string name="after2">Take photo of improved state</string>
     <string name="title_activity_user_detail">UserDetail</string>
     <string name="title_activity_list_of_users">ListOfUsers</string>
+    <string name="dateRegister">Registration</string>
 </resources>

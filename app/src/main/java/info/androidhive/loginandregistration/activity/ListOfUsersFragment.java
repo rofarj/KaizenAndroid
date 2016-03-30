@@ -95,12 +95,14 @@ public class ListOfUsersFragment extends ListFragment {
                             String surname = first_user.getString("surname");
                             String email = first_user.getString("user_email");
                             String company = first_user.getString("company");
+                            String phone = first_user.getString("phone");
+                            String date = first_user.getString("date");
 
                             UserItem useritem = new UserItem();
-/*
-                            Log.d("AAAAAAAAAAAA","AAAAA                  " +short_name);
-                            Log.d("AAAAAAAAAAAA","AAAAA                  " +act_state);
-                            Log.d("AAAAAAAAAAAA","AAAAA                  " +impState);
+
+                            Log.d("AAAAAAAAAAAA","AAAAA                  " +phone);
+                            Log.d("AAAAAAAAAAAA","AAAAA                  " +date);
+ /*                           Log.d("AAAAAAAAAAAA","AAAAA                  " +impState);
                             Log.d("AAAAAAAAAAAA","AAAAA                  " +adv);
                             Log.d("AAAAAAAAAAAA","AAAAA                  " +cos);
 */
@@ -109,9 +111,13 @@ public class ListOfUsersFragment extends ListFragment {
                             useritem.setSurname(surname);
                             useritem.setUserName(email);
                             useritem.setCompany(company);
+                            useritem.setPhone(phone);
+                            useritem.setDate(date);
 
                             userItems.add(useritem);
                         }
+                        //Log.d("AAAAAAAAAAAA","AAAAA                  " +phone);
+                        //Log.d("AAAAAAAAAAAA","AAAAA                  " +date);
                        /* String d =
                         Log.d("AAAAAAAAAAAA","AAAAA                  " +short_name);
                         Log.d("AAAAAAAAAAAA","AAAAA                  " +act_state);

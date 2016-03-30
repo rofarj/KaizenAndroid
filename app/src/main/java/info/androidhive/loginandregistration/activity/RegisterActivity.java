@@ -139,7 +139,7 @@ public class RegisterActivity extends Activity {
                 Log.d(TAG, "Register Response: " + response.toString());
                 hideDialog();
 
-                try {
+                /*try {
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
                     if (!error) {
@@ -157,7 +157,7 @@ public class RegisterActivity extends Activity {
                         String age = user.getString("age");
 
                         // Inserting row in users table
-                        db.addUser(name, email, uid,surname,company, phone, age);
+                        //db.addUser(name, email, uid,surname,company, phone, age);
 
                         Toast.makeText(getApplicationContext(), "User successfully registered. Try login now!", Toast.LENGTH_LONG).show();
 
@@ -177,8 +177,12 @@ public class RegisterActivity extends Activity {
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
-                }
-
+                }*/
+                Intent intent = new Intent(
+                        RegisterActivity.this,
+                        LoginActivity.class);
+                startActivity(intent);
+                finish();
             }
         }, new Response.ErrorListener() {
 

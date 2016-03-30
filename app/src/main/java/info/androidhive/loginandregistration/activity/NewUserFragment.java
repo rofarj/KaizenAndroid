@@ -75,9 +75,15 @@ public class NewUserFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.item_in_list_fragment2, container, false);
         ((TextView) view.findViewById(R.id.nazovUlohy)).setText(item.getName());
-        ((TextView) view.findViewById(R.id.kategoriaUlohy)).setText(item.getSurname());
-        ((TextView) view.findViewById(R.id.datumUlohy)).setText(item.getUserName());
-        ((TextView) view.findViewById(R.id.prioritaUlohy)).setText(item.getCompany());
+        ((TextView) view.findViewById(R.id.priezvisko)).setText(item.getSurname());
+        ((TextView) view.findViewById(R.id.telephone)).setText(item.getPhone());
+        ((TextView) view.findViewById(R.id.comp)).setText(item.getCompany());
+        //((TextView) view.findViewById(R.id.reg)).setText(item.getDate());
+        //String date = item.getDate();
+        //String phone = item.getPhone();
+
+        //Log.d("QQQQQQQQQQ", "QQQQQQQQQQQ " + date);
+        //Log.d("QQQQQQQQQQ", "QQQQQQQQQQQ " + phone);
 
         /*if (!item.getfileBefore().equals("") && !item.getFileAfter().equals("")) {
             file_before = item.getfileBefore();
@@ -118,70 +124,4 @@ public class NewUserFragment extends Fragment {
 
         return view;
     }
-    private class LoadImage extends AsyncTask<String, String, Bitmap> {
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            //pDialog = new ProgressDialog(getContext());
-            //pDialog.setMessage("Loading Image ....");
-            //pDialog.show();
-
-        }
-        protected Bitmap doInBackground(String... args) {
-            try {
-                bitmap = BitmapFactory.decodeStream((InputStream) new URL(args[0]).getContent());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return bitmap;
-        }
-
-        protected void onPostExecute(Bitmap image) {
-
-            if(image != null){
-                img.setImageBitmap(image);
-                //pDialog.dismiss();
-
-            }else{
-
-                //pDialog.dismiss();
-                Toast.makeText(getContext(), "Image Does Not exist or Network Error", Toast.LENGTH_SHORT).show();
-
-            }
-        }
-    }
-
-    private class LoadImage2 extends AsyncTask<String, String, Bitmap> {
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            //pDialog = new ProgressDialog(getContext());
-            //pDialog.setMessage("Loading Image ....");
-            //pDialog.show();
-
-        }
-        protected Bitmap doInBackground(String... args) {
-            try {
-                bitmap2 = BitmapFactory.decodeStream((InputStream) new URL(args[0]).getContent());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return bitmap2;
-        }
-
-        protected void onPostExecute(Bitmap image) {
-
-            if(image != null){
-                img2.setImageBitmap(image);
-                //pDialog.dismiss();
-
-            }else{
-
-                //pDialog.dismiss();
-                Toast.makeText(getContext(), "Image Does Not exist or Network Error", Toast.LENGTH_SHORT).show();
-
-            }
-        }
-    }
-
 }
