@@ -2,7 +2,7 @@
 <resources>
 
     <color name="text_color">#FFFFFF</color>
-    <color name="bg_login">#26ae90</color>
+    <color name="bg_login">#77BC1F</color>
     <color name="bg_register">#2e3237</color>
     <color name="bg_main">#428bca</color>
     <color name="white">#ffffff</color>
@@ -17,6 +17,6 @@
     <color name="btn_logut_bg">#ff6861</color>
 
 
-    <color name="nadpisy">#FFFFFF</color>
+    <color name="nadpisy">#515151</color>
     <color name="riadky">#C8C8C8</color>
 </resources>
