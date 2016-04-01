@@ -13,20 +13,20 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:orientation="vertical"
-    android:background="#2e3237">
+    android:background="#ffffff">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/bg_login">
+        android:background="#8FFF79">
 
         <TextView
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="fill_parent"
             android:layout_height="100px"
-            android:textColor="@color/text_color"
+            android:textColor="@color/nadpisy"
             android:text="@string/taskNameFragment"/>
 
         <TextView
@@ -34,7 +34,7 @@
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="fill_parent"
-            android:textColor="@color/text_color"
+            android:textColor="@color/nadpisy"
             android:layout_height="200px" />
 
     </LinearLayout>
@@ -50,7 +50,7 @@
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="fill_parent"
-            android:textColor="@color/text_color"
+            android:textColor="@color/nadpisy"
             android:layout_height="200px"
             android:text="@string/taskCathegoryFragment"/>
 
@@ -58,7 +58,7 @@
             android:id="@+id/kategoriaUlohy"
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/text_color"
+            android:textColor="@color/nadpisy"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" />
 
@@ -69,14 +69,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/bg_login">
+        android:background="#8FFF79">
 
         <TextView
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="fill_parent"
             android:layout_height="200px"
-            android:textColor="@color/text_color"
+            android:textColor="@color/nadpisy"
             android:text="@string/taskDateFragment"/>
 
         <TextView
@@ -84,7 +84,7 @@
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="fill_parent"
-            android:textColor="@color/text_color"
+            android:textColor="@color/nadpisy"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
@@ -99,7 +99,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="fill_parent"
             android:layout_height="200px"
-            android:textColor="@color/text_color"
+            android:textColor="@color/nadpisy"
             android:text="@string/taskPriority"/>
 
         <TextView
@@ -107,7 +107,7 @@
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="fill_parent"
-            android:textColor="@color/text_color"
+            android:textColor="@color/nadpisy"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
@@ -116,14 +116,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/bg_login">
+        android:background="#8FFF79">
 
         <TextView
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="fill_parent"
             android:layout_height="200px"
-            android:textColor="@color/text_color"
+            android:textColor="@color/nadpisy"
             android:text="@string/taskDescriptionFragment"/>
 
         <TextView
@@ -131,7 +131,7 @@
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="fill_parent"
-            android:textColor="@color/text_color"
+            android:textColor="@color/nadpisy"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
@@ -141,7 +141,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="fill_parent"
         android:layout_height="100px"
-        android:textColor="@color/text_color"
+        android:textColor="@color/nadpisy"
         android:text="@string/before"/>
 
 
@@ -157,7 +157,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="fill_parent"
         android:layout_height="100px"
-        android:textColor="@color/text_color"
+        android:textColor="@color/nadpisy"
         android:text="@string/after"/>
 
 

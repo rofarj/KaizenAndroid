@@ -92,13 +92,6 @@ public class RegisterActivity extends Activity {
                 String age = inputAge.getText().toString().trim();
                 String phone = inputPhone.getText().toString().trim();
 
-                Log.d("FFFFFFFFFFFFFFF", "name: " + name);
-                Log.d("FFFFFFFFFFFFFFF", "surname: " + surname);
-                Log.d("FFFFFFFFFFFFFFF", "email: " + email);
-                Log.d("FFFFFFFFFFFFFFF", "company: " + company);
-                Log.d("FFFFFFFFFFFFFFF", "age: " + age);
-                Log.d("FFFFFFFFFFFFFFF", "phone: " + phone);
-
                 if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty() && !surname.isEmpty() && !company.isEmpty() && !age.isEmpty() && !phone.isEmpty()) {
                     registerUser(name, email, password, surname, company, phone, age);
                 } else {
@@ -139,48 +132,7 @@ public class RegisterActivity extends Activity {
                 Log.d(TAG, "Register Response: " + response.toString());
                 hideDialog();
 
-                /*try {
-                    JSONObject jObj = new JSONObject(response);
-                    boolean error = jObj.getBoolean("error");
-                    if (!error) {
-                        // User successfully stored in MySQL
-                        // Now store the user in sqlite
-                        String uid = jObj.getString("uid");
-
-                        JSONObject user = jObj.getJSONObject("user");
-                        String name = user.getString("name");
-                        String email = user.getString("email");
-                       // String created_at = user.getString("created_at");
-                        String surname = user.getString("surname");
-                        String company = user.getString("company");
-                        String phone = user.getString("phone");
-                        String age = user.getString("age");
-
-                        // Inserting row in users table
-                        //db.addUser(name, email, uid,surname,company, phone, age);
-
-                        Toast.makeText(getApplicationContext(), "User successfully registered. Try login now!", Toast.LENGTH_LONG).show();
-
-                        // Launch login activity
-                        Intent intent = new Intent(
-                                RegisterActivity.this,
-                                LoginActivity.class);
-                        startActivity(intent);
-                        finish();
-                    } else {
-
-                        // Error occurred in registration. Get the error
-                        // message
-                        String errorMsg = jObj.getString("error_msg");
-                        Toast.makeText(getApplicationContext(), errorMsg, Toast.LENGTH_LONG).show();
-                        Log.d(TAG, "REGISTRATION ERROR: " +errorMsg );
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }*/
-                Intent intent = new Intent(
-                        RegisterActivity.this,
-                        LoginActivity.class);
+                Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
                 startActivity(intent);
                 finish();
             }

@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/bg_login"
+    android:background="@color/white"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="10dp" >
@@ -24,7 +24,7 @@
             android:layout_marginTop="20dip"
             android:background="@color/btn_login_bg"
             android:text="@string/add_item"
-            android:textColor="@color/btn_login" />
+            android:textColor="@color/nadpisy" />
 
         <Button
             android:id="@+id/view_items"
@@ -33,7 +33,7 @@
             android:layout_marginTop="20dip"
             android:background="@color/btn_login_bg"
             android:text="@string/view_items"
-            android:textColor="@color/btn_login" />
+            android:textColor="@color/nadpisy" />
 
         <Button
             android:id="@+id/view_users"
@@ -42,7 +42,7 @@
             android:layout_marginTop="20dip"
             android:background="@color/btn_login_bg"
             android:text="@string/view_users"
-            android:textColor="@color/btn_login" />
+            android:textColor="@color/nadpisy" />
 
         <Button
             android:id="@+id/logout"
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
             android:background="@color/btn_login_bg"
-            android:textColor="@color/btn_login"
+            android:textColor="@color/nadpisy"
             android:text="@string/btn_logout" />
 
         <!-- Link to Login Screen -->

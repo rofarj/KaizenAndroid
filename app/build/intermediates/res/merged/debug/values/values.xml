@@ -26,7 +26,7 @@
     <color name="background_material_light">@color/material_grey_50</color>
     <!-- From: file:/C:/Users/Palo/AndroidStudioProjects/AndroidLoginAndRegistration/app/src/main/res/values/colors.xml -->
     <eat-comment/>
-    <color name="bg_login">#26ae90</color>
+    <color name="bg_login">#77BC1F</color>
     <color name="bg_main">#428bca</color>
     <color name="bg_register">#2e3237</color>
     <!-- From: file:/C:/Users/Palo/AndroidStudioProjects/AndroidLoginAndRegistration/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
@@ -93,7 +93,7 @@
     <color name="material_grey_900">#ff212121</color>
     <!-- From: file:/C:/Users/Palo/AndroidStudioProjects/AndroidLoginAndRegistration/app/src/main/res/values/colors.xml -->
     <eat-comment/>
-    <color name="nadpisy">#FFFFFF</color>
+    <color name="nadpisy">#515151</color>
     <!-- From: file:/C:/Users/Palo/AndroidStudioProjects/AndroidLoginAndRegistration/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <color name="primary_dark_material_dark">@android:color/black</color>

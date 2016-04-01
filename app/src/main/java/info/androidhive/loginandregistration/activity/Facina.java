@@ -5,7 +5,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.graphics.Path;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -86,6 +89,8 @@ public class Facina extends AppCompatActivity {
     String fileName1;
     String fileName2;
     String creator;
+    ImageView image;
+    ImageView image2;
 
 
     String upLoadServerUri = null;
@@ -113,6 +118,10 @@ public class Facina extends AppCompatActivity {
         advantagesEditText4 = (EditText) findViewById(R.id.editText4);
         costsEditText2 = (EditText) findViewById(R.id.editText2);
         btnSend = (Button) findViewById(R.id.button);
+        image = (ImageView) findViewById(R.id.imageView);
+        image2 = (ImageView) findViewById(R.id.imageView2);
+
+
 
         // Session manager
         session = new SessionManager(getApplicationContext());
@@ -270,13 +279,20 @@ public class Facina extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 7 && resultCode == RESULT_OK) {
 
+            Matrix matrix = new Matrix();
             // Check if the result includes a thumbnail Bitmap
             if (data != null) {
                 if (data.hasExtra("data"))
 
                 {
                     Bitmap thumbnail = data.getParcelableExtra("data");
-                    //image.setImageBitmap(thumbnail);
+                    if(thumbnail == null){
+                        Log.d(TAG, "NULL");
+                    }
+                    else {
+                        Log.d(TAG, "NOT NULL");
+                    }
+                    //image.setImageBitmap(photo);
 
                     OutputStream outStream = null;
                     File file = new File(Environment.getExternalStorageDirectory(), "er.JPEG");
@@ -297,18 +313,33 @@ public class Facina extends AppCompatActivity {
 
                 } else {
                     //image.setImageURI(outputFileUri);
+
                 }
             }
+            File imgFile2 = new  File(finalPath);
+            Log.d(TAG, "ABSOLUTE PATH  " + finalPath);
+            if(imgFile2.exists()){
+                Bitmap myBitmap = BitmapFactory.decodeFile(imgFile2.getAbsolutePath());
+                matrix.postRotate(90);
+                Bitmap resized = Bitmap.createScaledBitmap(myBitmap, 300, 300, true);
+                Bitmap rotatedBitmap = Bitmap.createBitmap(resized, 0, 0, resized.getWidth(), resized.getHeight(), matrix, true);
+                image2.setImageBitmap(rotatedBitmap);
+            }
+
         }
+
         if (requestCode == 6 && resultCode == RESULT_OK) {
-
+            Matrix matrix = new Matrix();
             // Check if the result includes a thumbnail Bitmap
             if (data != null) {
+                Log.d(TAG, "DATA NOT NULL");
                 if (data.hasExtra("data"))
 
                 {
                     Bitmap thumbnail = data.getParcelableExtra("data");
                     //image.setImageBitmap(thumbnail);
+                    Log.d(TAG, "HAS EXTRA NOT NULL");
+
 
                     OutputStream outStream = null;
                     File file = new File(Environment.getExternalStorageDirectory(), "er.JPEG");
@@ -329,14 +360,26 @@ public class Facina extends AppCompatActivity {
 
                 } else {
                     //image.setImageURI(outputFileUri);
+                    Log.d(TAG, "HAS EXTA NULL");
                 }
             }
+            File imgFile = new  File(finalPath2);
+            Log.d(TAG, "ABSOLUTE PATH  " + finalPath2);
+            if(imgFile.exists()){
+                Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+                matrix.postRotate(90);
+                Bitmap resized = Bitmap.createScaledBitmap(myBitmap, 300, 300, true);
+                Bitmap rotatedBitmap = Bitmap.createBitmap(resized, 0, 0, resized.getWidth(), resized.getHeight(), matrix, true);
+                image.setImageBitmap(rotatedBitmap);
+            }
         }
+
     }
 
     public Uri getImageUri(Context inContext, Bitmap inImage) {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+
         String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
         return Uri.parse(path);
     }
@@ -753,6 +796,24 @@ public class Facina extends AppCompatActivity {
         }
         return result;
     }
+
+
+    @Override
+    public void onSaveInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+        outState.putCharSequence("txtBox", messageText.getText());
+        outState.putCharSequence("txtBox2", messageText2.getText());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        messageText.setText(savedInstanceState.getCharSequence("txtBox"));
+        messageText2.setText(savedInstanceState.getCharSequence("txtBox2"));
+        finalPath = savedInstanceState.getCharSequence("txtBox").toString();
+        finalPath2 = savedInstanceState.getCharSequence("txtBox2").toString();
+    }
+
 /*
     private void showDialog() {
         if (!pDialog.isShowing())
