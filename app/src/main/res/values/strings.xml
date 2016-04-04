@@ -15,8 +15,8 @@
     <string name="name1">Fullname</string>
     <string name="name2">Surename</string>
     <string name="title_activity_main2">Main2Activity</string>
-    <string name="company">Company</string>
-    <string name="phone">Phone</string>
+    <string name="company">Company:</string>
+    <string name="phone">Phone:</string>
     <string name="age">Age</string>
 
     <string name="hello_world">Hello world!</string>
@@ -26,19 +26,19 @@
     <string name="title_activity_event_detail">EventDetail</string>
     <string name="zoznamB">Zoznam úloh</string>
     <string name="addTaskB">Pridať úlohu</string>
-    <string name="taskName">Name</string>
+    <string name="taskName">Name of the idea</string>
     <string name="taskCathegory">Kategória</string>
     <string name="taskDate">Actual State</string>
     <string name="taskPriority">Improved State</string>
     <string name="taskDescription">Advantages</string>
     <string name="taskAddButton">Send</string>
-    <string name="taskNameFragment">Name:</string>
+    <string name="taskNameFragment"> Name:</string>
     <string name="priezvisko">Surname:</string>
-    <string name="taskCathegoryFragment">Actual State:</string>
-    <string name="taskDateFragment">Improved state:</string>
+    <string name="taskCathegoryFragment"> Actual State:</string>
+    <string name="taskDateFragment"> Improved state:</string>
     <string name="taskTimeFragment">Čas:</string>
     <string name="taskPriorityFragment">Priorita:</string>
-    <string name="taskDescriptionFragment">Costs:</string>
+    <string name="taskDescriptionFragment"> Costs:</string>
     <string name="taskDeleteButton">Delete User</string>
     <string name="title_activity_new_idea">NewIdea</string>
     <string name="title_activity_idea_detail">IdeaDetail</string>
@@ -60,5 +60,5 @@
     <string name="after2">Take photo of improved state</string>
     <string name="title_activity_user_detail">UserDetail</string>
     <string name="title_activity_list_of_users">ListOfUsers</string>
-    <string name="dateRegister">Registration</string>
+    <string name="dateRegister">Registration:</string>
 </resources>

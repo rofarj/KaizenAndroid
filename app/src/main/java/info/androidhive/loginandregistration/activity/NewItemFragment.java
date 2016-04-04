@@ -85,6 +85,8 @@ public class NewItemFragment extends Fragment {
         ((TextView) view.findViewById(R.id.datumUlohy)).setText(item.getImpState());
         ((TextView) view.findViewById(R.id.prioritaUlohy)).setText(item.getAdv());
         ((TextView) view.findViewById(R.id.popisUlohy)).setText(item.getCosts());
+        ((TextView) view.findViewById(R.id.priorita)).setText(item.getPriority());
+        ((TextView) view.findViewById(R.id.receiver)).setText(item.getReceiver());
 
         if (!item.getfileBefore().equals("") && !item.getFileAfter().equals("")) {
             file_before = item.getfileBefore();

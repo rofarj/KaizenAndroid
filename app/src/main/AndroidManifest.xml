@@ -62,6 +62,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.Facina"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_facina"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

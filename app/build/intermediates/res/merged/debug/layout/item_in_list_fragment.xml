@@ -43,6 +43,7 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
         android:orientation="horizontal" >
 
 
@@ -65,10 +66,28 @@
 
     </LinearLayout>
 
+
+
+
+
+    <ImageView
+        android:layout_width="800px"
+        android:layout_height="800px"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dip"
+        android:id="@+id/img"/>
+
+
+
+
+
+
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginTop="20dip"
         android:background="#8FFF79">
 
         <TextView
@@ -92,6 +111,22 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#8FFF79">
+    <ImageView
+        android:layout_width="800px"
+        android:layout_height="800px"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dip"
+        android:background="#8FFF79"
+        android:id="@+id/img2"
+        android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
         android:orientation="horizontal">
 
         <TextView
@@ -100,7 +135,7 @@
             android:layout_width="fill_parent"
             android:layout_height="200px"
             android:textColor="@color/nadpisy"
-            android:text="@string/taskPriority"/>
+            android:text=" Advantages"/>
 
         <TextView
             android:id="@+id/prioritaUlohy"
@@ -116,6 +151,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginTop="20dip"
         android:background="#8FFF79">
 
         <TextView
@@ -136,36 +172,57 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_weight="1"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="fill_parent"
-        android:layout_height="100px"
-        android:textColor="@color/nadpisy"
-        android:text="@string/before"/>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dip"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="200px"
+            android:textColor="@color/nadpisy"
+            android:text=" Priority:"/>
+
+        <TextView
+            android:id="@+id/priorita"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="fill_parent"
+            android:textColor="@color/nadpisy"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dip"
+        android:background="#8FFF79">
+
+        <TextView
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="200px"
+            android:textColor="@color/nadpisy"
+            android:text=" Receiver:"/>
+
+        <TextView
+            android:id="@+id/receiver"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="fill_parent"
+            android:textColor="@color/nadpisy"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 
 
-
-    <ImageView
-        android:layout_width="800px"
-        android:layout_height="450px"
-        android:layout_gravity="center"
-        android:id="@+id/img"/>
-
-    <TextView
-        android:layout_weight="1"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="fill_parent"
-        android:layout_height="100px"
-        android:textColor="@color/nadpisy"
-        android:text="@string/after"/>
-
-
-    <ImageView
-        android:layout_width="800px"
-        android:layout_height="450px"
-        android:layout_gravity="center"
-        android:id="@+id/img2"/>
     <!--
     <Button
         android:layout_width="100dp"

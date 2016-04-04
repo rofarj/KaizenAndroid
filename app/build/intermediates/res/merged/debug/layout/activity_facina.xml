@@ -126,6 +126,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/costs"
             android:textColor="@color/nadpisy"
@@ -137,6 +138,57 @@
             android:layout_height="wrap_content"
             android:background="@drawable/custom_edittext"
             android:id="@+id/editText2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Receiver"
+            android:textColor="@color/nadpisy"
+            android:textStyle="bold"
+            android:id="@+id/receiver" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_edittext"
+            android:id="@+id/editText5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Priority"
+            android:textColor="@color/nadpisy"
+            android:textStyle="bold"
+            android:id="@+id/textView2" />
+
+        <RadioGroup
+            android:id="@+id/radioPriorita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40px"
+            >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Urgent"
+                android:id="@+id/radioButton" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="High"
+                android:id="@+id/radioButton2" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Normal"
+                android:id="@+id/radioButton6" />
+        </RadioGroup>
 
     <TextView
         android:layout_width="wrap_content"

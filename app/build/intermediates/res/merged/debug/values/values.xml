@@ -365,9 +365,9 @@
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <!-- From: file:/C:/Users/Palo/AndroidStudioProjects/AndroidLoginAndRegistration/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="company">Company</string>
+    <string name="company">Company:</string>
     <string name="costs">Costs</string>
-    <string name="dateRegister">Registration</string>
+    <string name="dateRegister">Registration:</string>
     <string name="hello_world">Hello world!</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
@@ -376,7 +376,7 @@
     <string name="name1">Fullname</string>
     <string name="name2">Surename</string>
     <string name="os">Old state</string>
-    <string name="phone">Phone</string>
+    <string name="phone">Phone:</string>
     <string name="photo">Take a photo now</string>
     <string name="priezvisko">Surname:</string>
     <!-- From: file:/C:/Users/Palo/AndroidStudioProjects/AndroidLoginAndRegistration/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
@@ -387,14 +387,14 @@
     <string name="surname">Surname</string>
     <string name="taskAddButton">Send</string>
     <string name="taskCathegory">Kategória</string>
-    <string name="taskCathegoryFragment">Actual State:</string>
+    <string name="taskCathegoryFragment"> Actual State:</string>
     <string name="taskDate">Actual State</string>
-    <string name="taskDateFragment">Improved state:</string>
+    <string name="taskDateFragment"> Improved state:</string>
     <string name="taskDeleteButton">Delete User</string>
     <string name="taskDescription">Advantages</string>
-    <string name="taskDescriptionFragment">Costs:</string>
-    <string name="taskName">Name</string>
-    <string name="taskNameFragment">Name:</string>
+    <string name="taskDescriptionFragment"> Costs:</string>
+    <string name="taskName">Name of the idea</string>
+    <string name="taskNameFragment"> Name:</string>
     <string name="taskPriority">Improved State</string>
     <string name="taskPriorityFragment">Priorita:</string>
     <string name="taskTimeFragment">Čas:</string>

@@ -63,6 +63,7 @@
         <activity
             android:name="info.androidhive.loginandregistration.activity.Facina"
             android:label="@string/title_activity_facina"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="info.androidhive.loginandregistration.activity.UserDetail"

@@ -21,6 +21,8 @@ public class IdeaItem implements Parcelable {
     private  String creator;
     private  String file_b;
     private  String file_a;
+    private String priority;
+    private String receiver;
 
     /**
      * prazdny konstruktor
@@ -49,6 +51,8 @@ public class IdeaItem implements Parcelable {
         costs = in.readString();
         file_a = in.readString();
         file_b = in.readString();
+        priority = in.readString();
+        receiver = in.readString();
     }
 
     /**
@@ -176,6 +180,30 @@ public class IdeaItem implements Parcelable {
     }
 
 
+    public String getPriority() {
+        return priority;
+    }
+
+    /**
+     * nastavi popis
+     * @param desc
+     */
+    public void setPriority(String fa) {
+        this.priority = fa;
+    }
+
+    public String getReceiver() {
+        return receiver;
+    }
+
+    /**
+     * nastavi popis
+     * @param desc
+     */
+    public void setReceiver(String fa) {
+        this.receiver = fa;
+    }
+
     public String getFileAfter() {
         return file_a;
     }
@@ -205,6 +233,8 @@ public class IdeaItem implements Parcelable {
         dest.writeString(costs);
         dest.writeString(file_a);
         dest.writeString(file_b);
+        dest.writeString(priority);
+        dest.writeString(receiver);
     }
 
     public static final Parcelable.Creator<IdeaItem> CREATOR

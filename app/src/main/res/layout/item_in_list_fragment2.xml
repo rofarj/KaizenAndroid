@@ -13,20 +13,20 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:orientation="vertical"
-        android:background="#2e3237">
+        android:background="#FFFFFF">
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/bg_login">
+        android:background="#8FFF79">
 
         <TextView
             android:layout_weight="3"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="fill_parent"
             android:layout_height="100px"
-            android:textColor="@color/text_color"
+            android:textColor="@color/nadpisy"
             android:text="@string/taskNameFragment"/>
 
         <TextView
@@ -34,7 +34,7 @@
             android:layout_weight="2"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="fill_parent"
-            android:textColor="@color/text_color"
+            android:textColor="@color/nadpisy"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
@@ -43,14 +43,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/bg_login">
+        android:background="#8FFF79">
 
         <TextView
             android:layout_weight="3"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="fill_parent"
             android:layout_height="100px"
-            android:textColor="@color/text_color"
+            android:textColor="@color/nadpisy"
             android:text="@string/priezvisko"/>
 
         <TextView
@@ -74,7 +74,7 @@
                 android:layout_weight="3"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="fill_parent"
-                android:textColor="@color/text_color"
+                android:textColor="@color/nadpisy"
                 android:layout_height="200px"
                 android:text="@string/phone"/>
 
@@ -82,7 +82,7 @@
                 android:id="@+id/telephone"
                 android:layout_weight="2"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/text_color"
+                android:textColor="@color/nadpisy"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" />
 
@@ -93,14 +93,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@color/bg_login">
+            android:background="#8FFF79">
 
             <TextView
                 android:layout_weight="3"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="fill_parent"
                 android:layout_height="200px"
-                android:textColor="@color/text_color"
+                android:textColor="@color/nadpisy"
                 android:text="@string/company"/>
 
             <TextView
@@ -108,7 +108,7 @@
                 android:layout_weight="2"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="fill_parent"
-                android:textColor="@color/text_color"
+                android:textColor="@color/nadpisy"
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
@@ -123,7 +123,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="fill_parent"
                 android:layout_height="200px"
-                android:textColor="@color/text_color"
+                android:textColor="@color/nadpisy"
                 android:text="@string/dateRegister"/>
 
             <TextView
@@ -131,7 +131,7 @@
                 android:layout_weight="2"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="fill_parent"
-                android:textColor="@color/text_color"
+                android:textColor="@color/nadpisy"
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
@@ -145,7 +145,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
             android:background="@color/btn_login_bg"
-            android:textColor="@color/btn_login"
+            android:textColor="@color/nadpisy"
             android:text="@string/taskDeleteButton" />
     </LinearLayout>
 </ScrollView>

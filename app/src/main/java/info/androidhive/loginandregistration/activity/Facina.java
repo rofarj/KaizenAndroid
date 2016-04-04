@@ -22,6 +22,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -68,8 +70,8 @@ import info.androidhive.loginandregistration.helper.SessionManager;
 public class Facina extends AppCompatActivity {
 
     private Button btnSend;
-    private EditText nameEditText, actualStateEditText1,improvedStateEditText3, advantagesEditText4, costsEditText2;
-    private String name, actual_state, improved_state, advantages, costs;
+    private EditText nameEditText, actualStateEditText1,improvedStateEditText3, advantagesEditText4, costsEditText2, receiverEditText5;
+    private String name, actual_state, improved_state, advantages, costs, receiver;
     private static final String TAG = NewIdea.class.getSimpleName();
     private ProgressDialog pDialog;
     private SessionManager session;
@@ -90,7 +92,11 @@ public class Facina extends AppCompatActivity {
     String fileName2;
     String creator;
     ImageView image;
-    ImageView image2;
+    ImageView image2;private
+    RadioGroup radioPrioritaGroup;
+    private RadioButton radioPrioritaButton;
+    private String priorita;
+    private String cislo_priorita;
 
 
     String upLoadServerUri = null;
@@ -117,10 +123,13 @@ public class Facina extends AppCompatActivity {
         improvedStateEditText3 = (EditText) findViewById(R.id.editText3);
         advantagesEditText4 = (EditText) findViewById(R.id.editText4);
         costsEditText2 = (EditText) findViewById(R.id.editText2);
+        receiverEditText5 = (EditText) findViewById(R.id.editText5);
         btnSend = (Button) findViewById(R.id.button);
         image = (ImageView) findViewById(R.id.imageView);
         image2 = (ImageView) findViewById(R.id.imageView2);
-
+        radioPrioritaGroup = (RadioGroup) findViewById(R.id.radioPriorita);
+        fileName1 = "";
+        fileName2 = "";
 
 
         // Session manager
@@ -233,27 +242,59 @@ public class Facina extends AppCompatActivity {
                 improved_state = improvedStateEditText3.getText().toString();
                 advantages = advantagesEditText4.getText().toString();
                 costs = costsEditText2.getText().toString();
+                receiver = receiverEditText5.getText().toString();
 
-                dialog = ProgressDialog.show(Facina.this, "", "Uploading old file...", true);
+                int selectedId2 = radioPrioritaGroup.getCheckedRadioButtonId();
+                radioPrioritaButton = (RadioButton) findViewById(selectedId2);
+
+                try {
+                    priorita = radioPrioritaButton.getText().toString();
+                    if(priorita.equals("Urgent")){
+                        cislo_priorita = "1";
+                    }
+                    else if(priorita.equals("High")){
+                        cislo_priorita = "2";
+                    }
+                    else if(priorita.equals("Normal")){
+                        cislo_priorita = "3";
+                    }
+                    Log.d(TAG, "PRIORITA " + cislo_priorita);
+                } catch (Exception e) {
+                    priorita = "";
+                }
+
+
+                if(!finalPath.equals("/mnt/sdcard/subor.txt")) {
+                    dialog = ProgressDialog.show(Facina.this, "", "Uploading old file...", true);
+                }
 
                 new Thread(new Runnable() {
                     public void run() {
                         runOnUiThread(new Runnable() {
                             public void run() {
-                                messageText.setText("uploading started.....");
+                                if(!finalPath.equals("/mnt/sdcard/subor.txt")) {
+                                    messageText.setText("uploading started.....");
+                                }
                             }
                         });
-
-                        uploadFile(finalPath);
+                        Log.d(TAG, "FINALPATH " + finalPath);
+                        if(!finalPath.equals("/mnt/sdcard/subor.txt")) {
+                            uploadFile(finalPath);
+                        }
                         runOnUiThread(new Runnable() {
                             public void run() {
-                                dialog = ProgressDialog.show(Facina.this, "", "Uploading new file...", true);
-                                messageText2.setText("uploading started.....");
+                                if(!finalPath2.equals("/mnt/sdcard/subor.txt")) {
+                                    dialog = ProgressDialog.show(Facina.this, "", "Uploading new file...", true);
+                                    messageText2.setText("uploading started.....");
+                                }
                             }
                         });
-                        uploadFile2(finalPath2);
+                        Log.d(TAG, "FINALPATH2 " + finalPath2);
+                        if(!finalPath2.equals("/mnt/sdcard/subor.txt")) {
+                            uploadFile2(finalPath2);
+                        }
                         if (!name.isEmpty() && !actual_state.isEmpty() && !improved_state.isEmpty() && !advantages.isEmpty() && !costs.isEmpty()) {
-                            registerIdea(name, actual_state, improved_state, advantages, costs, creator, fileName1,fileName2);
+                            registerIdea(name, actual_state, improved_state, advantages, costs, creator, fileName1,fileName2, cislo_priorita, receiver);
                         } else {
                             runOnUiThread(new Runnable() {
                                 public void run() {
@@ -264,7 +305,7 @@ public class Facina extends AppCompatActivity {
                     }
                 }).start();
 
-                //Intent intent2 = new Intent(v.getContext(), MainActivity.class);
+                //Intent intent2 = new Intent(v.getContext(), User.class);
                 //startActivity(intent2);
 
                 /* ulozenie zaznamu do databazy */
@@ -675,7 +716,7 @@ public class Facina extends AppCompatActivity {
     }
 
 
-    private void registerIdea(final String name, final String actual_state, final String improved_state, final String advantages, final String costs, final String creator, final String fileName1, final String fileName2) {
+    private void registerIdea(final String name, final String actual_state, final String improved_state, final String advantages, final String costs, final String creator, final String fileName1, final String fileName2, final String priority, final String receiver) {
         // Tag used to cancel the request
         String tag_string_req = "req_register";
 
@@ -706,6 +747,7 @@ public class Facina extends AppCompatActivity {
                         String creator = idea.getString("creator");
                         String fileName1 = idea.getString("file_before");
                         String fileName2 = idea.getString("file_after");
+                        //String rec = idea.getString("")
 
 
                         // Inserting row in users table
@@ -753,6 +795,8 @@ public class Facina extends AppCompatActivity {
                 params.put("creator", creator);
                 params.put("file_before",fileName1);
                 params.put("file_after", fileName2);
+                params.put("priority", priority);
+                params.put("receiver", receiver);
 
                 return params;
             }

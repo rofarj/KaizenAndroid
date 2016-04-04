@@ -100,6 +100,8 @@ public class ListOfIdeasFragment extends ListFragment {
                             String creator = first_idea.getString("creator");
                             String file_before = first_idea.getString("file_before");
                             String file_after = first_idea.getString("file_after");
+                            String priority = first_idea.getString("priority");
+                            String receiver = first_idea.getString("receiver");
 
                             IdeaItem ideaitem = new IdeaItem();
 /*
@@ -119,6 +121,8 @@ public class ListOfIdeasFragment extends ListFragment {
                             ideaitem.setCreator(creator);
                             ideaitem.setFileBefore(file_before);
                             ideaitem.setFileAfter(file_after);
+                            ideaitem.setPriority(priority);
+                            ideaitem.setReceiver(receiver);
 
                             ideaItems.add(ideaitem);
                         }
