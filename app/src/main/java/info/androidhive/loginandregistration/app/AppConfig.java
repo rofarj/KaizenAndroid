@@ -16,4 +16,7 @@ public class AppConfig {
 	public static String URL_USERS = "http://zims.ceitgroup.eu/kaizen/android_login_api/view_users.php";
 
 	public static String URL_DATA = "http://zims.ceitgroup.eu/kaizen/android_login_api/facina.php";
+
+	public static String URL_MY_IDEAS = "http://zims.ceitgroup.eu/kaizen/android_login_api/my_ideas.php";
+
 }

@@ -52,7 +52,7 @@ public class ListOfUsersFragment extends ListFragment {
         db = new SQLiteHandler(getActivity());
         //todoItems = db.getAllItems();
         userItems = new ArrayList<UserItem>();
-        dataRequest();
+
 
     }
 

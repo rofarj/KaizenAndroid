@@ -12,6 +12,7 @@
     <string name="btn_link_to_login">Already registred! Login Me.</string>
     <string name="welcome">Welcome</string>
     <string name="btn_logout">LOGOUT</string>
+    <string name="my_ideas">MY IDEAS</string>
     <string name="name1">Fullname</string>
     <string name="name2">Surename</string>
     <string name="title_activity_main2">Main2Activity</string>

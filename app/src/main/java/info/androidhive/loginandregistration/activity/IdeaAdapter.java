@@ -72,30 +72,10 @@ public class IdeaAdapter extends ArrayAdapter<IdeaItem> {
 
 
         viewHolder.short_name.setText(myList.get(position).getName());
-        /*if (myList.get(position).getCath().equals("Rodina/osobné")) {
-            viewHolder.short_name.setBackgroundColor(Color.YELLOW);
-        } else if (myList.get(position).getCath().equals("Škola")){
-            viewHolder.short_name.setBackgroundColor(Color.CYAN);
-        } else if (myList.get(position).getCath().equals("Iné")){
-            viewHolder.short_name.setBackgroundColor(Color.GRAY);
-        }*/
 
         viewHolder.actual_state.setText(myList.get(position).getTime());
-        /*if (myList.get(position).getCath().equals("Rodina/osobné")) {
-            viewHolder.datum.setBackgroundColor(Color.YELLOW);
-        } else if (myList.get(position).getCath().equals("Škola")){
-            viewHolder.datum.setBackgroundColor(Color.CYAN);
-        } else if (myList.get(position).getCath().equals("Iné")){
-            viewHolder.datum.setBackgroundColor(Color.GRAY);
-        }*/
+
         viewHolder.imroved_state.setText(myList.get(position).getCreator());
-        /*if (myList.get(position).getCath().equals("Rodina/osobné")) {
-            viewHolder.priorita.setBackgroundColor(Color.YELLOW);
-        } else if (myList.get(position).getCath().equals("Škola")){
-            viewHolder.priorita.setBackgroundColor(Color.CYAN);
-        } else if (myList.get(position).getCath().equals("Iné")){
-            viewHolder.priorita.setBackgroundColor(Color.GRAY);
-        }*/
 
         return v;
     }

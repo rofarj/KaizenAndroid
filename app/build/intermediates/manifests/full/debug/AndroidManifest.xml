@@ -53,6 +53,10 @@
             android:label="@string/title_activity_idea_detail"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name="info.androidhive.loginandregistration.activity.MyIdeaDetail"
+            android:label="MyIdeaDetail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name="info.androidhive.loginandregistration.activity.ListOfIdeas"
             android:label="@string/title_activity_list_of_ideas"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -72,6 +76,10 @@
         <activity
             android:name="info.androidhive.loginandregistration.activity.ListOfUsers"
             android:label="@string/title_activity_list_of_users"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="info.androidhive.loginandregistration.activity.ListOfMyIdeas"
+            android:label="ListOfMyIdeas"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

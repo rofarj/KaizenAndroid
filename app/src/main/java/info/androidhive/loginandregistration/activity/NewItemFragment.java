@@ -32,13 +32,12 @@ import info.androidhive.loginandregistration.R;
  */
 public class NewItemFragment extends Fragment {
 
-    private Button btn;
     IdeaItem item;
     ImageView img,img2;
     Bitmap bitmap, bitmap2;
     ProgressDialog pDialog;
     String file_before, file_before_without_dot, file_after, file_after_without_dot;
-
+    Button btn;
 
     /**
      * Odoslanie dat novovytvorenemu fragment
@@ -87,6 +86,7 @@ public class NewItemFragment extends Fragment {
         ((TextView) view.findViewById(R.id.popisUlohy)).setText(item.getCosts());
         ((TextView) view.findViewById(R.id.priorita)).setText(item.getPriority());
         ((TextView) view.findViewById(R.id.receiver)).setText(item.getReceiver());
+        btn = ((Button) view.findViewById(R.id.vymazat));
 
         if (!item.getfileBefore().equals("") && !item.getFileAfter().equals("")) {
             file_before = item.getfileBefore();
@@ -108,6 +108,10 @@ public class NewItemFragment extends Fragment {
         /*btn.setOnClickListener(new View.OnClickListener() {
                                    @Override
                                    public void onClick(View v) {
+
+
+
+                                   }
                                        //final MyDatabaseHelper db = new MyDatabaseHelper(getActivity());
                                        //db.deleteTitle(item.getTask());
 

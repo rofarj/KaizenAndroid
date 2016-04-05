@@ -52,6 +52,11 @@
             android:name=".activity.IdeaDetail"
             android:label="@string/title_activity_idea_detail"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".activity.MyIdeaDetail"
+            android:label="MyIdeaDetail"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.ListOfIdeas"
             android:label="@string/title_activity_list_of_ideas"
@@ -72,6 +77,10 @@
         <activity
             android:name=".activity.ListOfUsers"
             android:label="@string/title_activity_list_of_users"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".activity.ListOfMyIdeas"
+            android:label="ListOfMyIdeas"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

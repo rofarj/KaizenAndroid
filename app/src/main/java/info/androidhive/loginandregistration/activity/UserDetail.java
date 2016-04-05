@@ -1,13 +1,13 @@
 package info.androidhive.loginandregistration.activity;
 
-import android.app.Activity;
-import android.app.FragmentTransaction;
-import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import info.androidhive.loginandregistration.R;
+        import android.app.Activity;
+        import android.app.FragmentTransaction;
+        import android.content.Intent;
+        import android.support.v7.app.ActionBarActivity;
+        import android.os.Bundle;
+        import android.view.Menu;
+        import android.view.MenuItem;
+        import info.androidhive.loginandregistration.R;
 /**
  * Aktivita na zobrazenie podrobnosti o ulohe. Prerobena verzia z KucharkaFragment
  */

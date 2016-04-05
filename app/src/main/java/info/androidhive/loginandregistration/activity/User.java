@@ -3,6 +3,7 @@ package info.androidhive.loginandregistration.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ import info.androidhive.loginandregistration.helper.SessionManager;
 public class User extends Activity implements View.OnClickListener {
     private SQLiteHandler db;
     private SessionManager session;
+    private String btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +26,10 @@ public class User extends Activity implements View.OnClickListener {
 
 
 
-
         ((Button)findViewById(R.id.add_item)).setOnClickListener(this);
         ((Button)findViewById(R.id.view_items)).setOnClickListener(this);
         ((Button)findViewById(R.id.view_users)).setOnClickListener(this);
+        ((Button)findViewById(R.id.my_ideas)).setOnClickListener(this);
         ((Button)findViewById(R.id.logout)).setOnClickListener(this);
         db = new SQLiteHandler(getApplicationContext());
 
@@ -44,18 +46,28 @@ public class User extends Activity implements View.OnClickListener {
                 startActivity(intent);
                 break;
             case R.id.view_items:
+                btn = "A";
                 Intent intent2 = new Intent(this, ListOfIdeas.class);
                 startActivity(intent2);
                 break;
             case R.id.view_users:
+
                 Intent intent3 = new Intent(this, ListOfUsers.class);
+
                 startActivity(intent3);
+                break;
+            case R.id.my_ideas:
+                btn = "B";
+                Intent intent4 = new Intent(this, ListOfMyIdeas.class);
+                startActivity(intent4);
                 break;
             case R.id.logout:
                 logoutUser();
                 break;
         }
     }
+
+    public String getBtn(){return btn; }
 
     private void logoutUser() {
         session.setLogin(false);

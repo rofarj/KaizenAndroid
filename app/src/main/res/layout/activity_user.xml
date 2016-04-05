@@ -45,6 +45,15 @@
             android:textColor="@color/nadpisy" />
 
         <Button
+            android:id="@+id/my_ideas"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@color/btn_login_bg"
+            android:text="@string/my_ideas"
+            android:textColor="@color/nadpisy" />
+
+        <Button
             android:id="@+id/logout"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
