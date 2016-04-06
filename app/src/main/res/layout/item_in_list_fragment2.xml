@@ -58,7 +58,7 @@
             android:layout_weight="2"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="fill_parent"
-            android:textColor="@color/text_color"
+            android:textColor="@color/nadpisy"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
@@ -138,7 +138,7 @@
 
 
 
-
+<!--
         <Button
             android:id="@+id/vymazat"
             android:layout_width="fill_parent"
@@ -147,5 +147,6 @@
             android:background="@color/btn_login_bg"
             android:textColor="@color/nadpisy"
             android:text="@string/taskDeleteButton" />
+            -->
     </LinearLayout>
 </ScrollView>

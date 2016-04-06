@@ -19,4 +19,10 @@ public class AppConfig {
 
 	public static String URL_MY_IDEAS = "http://zims.ceitgroup.eu/kaizen/android_login_api/my_ideas.php";
 
+	public static String UPDATE_IDEA = "http://zims.ceitgroup.eu/kaizen/android_login_api/update_idea.php";
+
+	public static String DELETE_IDEA = "http://zims.ceitgroup.eu/kaizen/android_login_api/delete_idea.php";
+
+	public static String DELETE_USER = "http://zims.ceitgroup.eu/kaizen/android_login_api/delete_user.php";
+
 }

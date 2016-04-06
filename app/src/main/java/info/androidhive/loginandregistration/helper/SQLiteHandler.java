@@ -34,7 +34,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 	private static final String TABLE_IDEA = "idea";
 
 	// Login Table Columns names
-	private static final String KEY_ID = "id";
+	//private static final String KEY_ID = "id";
 	private static final String KEY_NAME = "name";
 	private static final String KEY_SURNAME = "surname";
 	private static final String KEY_EMAIL = "email";
@@ -42,6 +42,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 	private static final String KEY_COMPANY = "company";
 	private static final String KEY_PHONE = "phone";
 	private static final String KEY_AGE = "age";
+	private static final String KEY_USER_TYPE = "user_type";
 
 	private static final String KEY_SHORT_NAME = "short_name";
 	private static final String KEY_ACTUAL_STATE = "actual_state";
@@ -60,12 +61,13 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		String CREATE_LOGIN_TABLE = "CREATE TABLE " + TABLE_USER + "("
-				+ KEY_ID + " INTEGER PRIMARY KEY," + KEY_NAME + " TEXT,"
+				+ KEY_NAME + " TEXT,"
 				+ KEY_SURNAME + " TEXT,"
 				+ KEY_EMAIL + " TEXT UNIQUE,"
 				+ KEY_COMPANY + " TEXT," + KEY_UID + " TEXT,"
 				+ KEY_PHONE + " TEXT,"
-				+ KEY_AGE + " INTEGER" + ")";
+				+ KEY_AGE + " INTEGER,"
+				+ KEY_USER_TYPE + " INTEGER" + ")";
 		db.execSQL(CREATE_LOGIN_TABLE);
 
 		String CREATE_IDEA_TABLE = "CREATE TABLE " + TABLE_IDEA + "("
@@ -95,7 +97,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 	/**
 	 * Storing user details in database
 	 * */
-	public void addUser(String name, String email, String uid, String surname, String company, String phone, String age) {
+	public void addUser(String name, String email, String uid, String surname, String company, String phone, String age, String type) {
 		SQLiteDatabase db = this.getWritableDatabase();
 
 	ContentValues values = new ContentValues();
@@ -107,9 +109,10 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 	values.put(KEY_COMPANY, company);
 	values.put(KEY_PHONE, phone);
 	values.put(KEY_AGE, age);
+	values.put(KEY_USER_TYPE, type);
 
 
-	//Log.d("abracadabra");
+	//Log.d("");
 	// Inserting Row
 	long id = db.insert(TABLE_USER, null, values);
 	db.close(); // Closing database connection
@@ -153,13 +156,14 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 		// Move to first row
 		cursor.moveToFirst();
 		if (cursor.getCount() > 0) {
-			user.put("name", cursor.getString(1));
-			user.put("surname", cursor.getString(2));
-			user.put("email", cursor.getString(3));
-			user.put("uid", cursor.getString(5));
-			user.put("company", cursor.getString(4));
-			user.put("phone", cursor.getString(6));
-			user.put("age", cursor.getString(7));
+			user.put("name", cursor.getString(0));
+			user.put("surname", cursor.getString(1));
+			user.put("email", cursor.getString(2));
+			user.put("uid", cursor.getString(4));
+			user.put("company", cursor.getString(3));
+			user.put("phone", cursor.getString(5));
+			user.put("age", cursor.getString(6));
+			user.put("user_type", cursor.getString(7));
 		}
 		cursor.close();
 		db.close();

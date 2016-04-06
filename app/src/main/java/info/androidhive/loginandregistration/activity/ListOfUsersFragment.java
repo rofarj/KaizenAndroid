@@ -53,7 +53,7 @@ public class ListOfUsersFragment extends ListFragment {
         //todoItems = db.getAllItems();
         userItems = new ArrayList<UserItem>();
 
-
+        dataRequest();
     }
 
 
@@ -102,7 +102,7 @@ public class ListOfUsersFragment extends ListFragment {
 
                             Log.d("AAAAAAAAAAAA","AAAAA                  " +phone);
                             Log.d("AAAAAAAAAAAA","AAAAA                  " +date);
- /*                           Log.d("AAAAAAAAAAAA","AAAAA                  " +impState);
+ /*                         Log.d("AAAAAAAAAAAA","AAAAA                  " +impState);
                             Log.d("AAAAAAAAAAAA","AAAAA                  " +adv);
                             Log.d("AAAAAAAAAAAA","AAAAA                  " +cos);
 */

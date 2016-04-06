@@ -53,6 +53,7 @@ public class IdeaItem implements Parcelable {
         file_b = in.readString();
         priority = in.readString();
         receiver = in.readString();
+        creator = in.readString();
     }
 
     /**
@@ -235,6 +236,7 @@ public class IdeaItem implements Parcelable {
         dest.writeString(file_b);
         dest.writeString(priority);
         dest.writeString(receiver);
+        dest.writeString(creator);
     }
 
     public static final Parcelable.Creator<IdeaItem> CREATOR

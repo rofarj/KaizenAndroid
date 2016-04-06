@@ -59,7 +59,9 @@ public class ListOfIdeasFragment extends ListFragment {
         String name = userr.get("name");
         String user = userr.get("email");
         String userType = userr.get("user_type");
-
+        String userID = userr.get("id");
+        Log.d(TAG, "LIST FRAGMENT USER_TYPE " + userType);
+        Log.d(TAG, "LIST FRAGMENT USER_ID " + userID);
         dataRequest();
     }
 
@@ -111,9 +113,9 @@ public class ListOfIdeasFragment extends ListFragment {
                             String receiver = first_idea.getString("receiver");
 
                             IdeaItem ideaitem = new IdeaItem();
-/*
-                            Log.d("AAAAAAAAAAAA","AAAAA                  " +short_name);
-                            Log.d("AAAAAAAAAAAA","AAAAA                  " +act_state);
+
+                            Log.d("AAAAAAAAAAAA","CREATOR                  " +creator);
+/*                            Log.d("AAAAAAAAAAAA","AAAAA                  " +act_state);
                             Log.d("AAAAAAAAAAAA","AAAAA                  " +impState);
                             Log.d("AAAAAAAAAAAA","AAAAA                  " +adv);
                             Log.d("AAAAAAAAAAAA","AAAAA                  " +cos);
@@ -180,121 +182,7 @@ public class ListOfIdeasFragment extends ListFragment {
         AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
     }
 
-    private void dataRequest2(final String user) {
-        final String short_name;
-        final String actual_state;
-        final String improved_state;
-        final String advantages;
-        final String costs;
-        //final String phone;
-        //final String age;
 
-        // Tag used to cancel the request
-        String tag_string_req = "req_register";
-
-        StringRequest strReq = new StringRequest(Request.Method.POST, AppConfig.URL_MY_IDEAS, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                Log.d(TAG, "Register Response: " + response.toString());
-
-                try {
-                    JSONObject jObj = new JSONObject(response);
-                    boolean error = jObj.getBoolean("error");
-                    if (!error) {
-                        // User successfully stored in MySQL
-                        // Now store the user in sqlite
-                        String length2 = jObj.getString("length");
-                        int length = Integer.parseInt(length2);
-
-                        JSONObject[] ideas = new JSONObject[length];
-
-                        JSONObject idea = jObj.getJSONObject("idea");
-
-                        for(int j=0;j<length;j++) {
-                            JSONObject first_idea = idea.getJSONObject("'" + j + "'");
-                            String id = first_idea.getString("id");
-                            int _id = Integer.parseInt(id);
-                            String short_name = first_idea.getString("short_name");
-                            String act_state = first_idea.getString("actual_state");
-                            String impState = first_idea.getString("improved_state");
-                            String adv = first_idea.getString("advantages");
-                            String cos = first_idea.getString("costs");
-                            String time = first_idea.getString("time");
-                            String creator = first_idea.getString("creator");
-                            String file_before = first_idea.getString("file_before");
-                            String file_after = first_idea.getString("file_after");
-                            String priority = first_idea.getString("priority");
-                            String receiver = first_idea.getString("receiver");
-
-                            IdeaItem ideaitem = new IdeaItem();
-/*
-                            Log.d("AAAAAAAAAAAA","AAAAA                  " +short_name);
-                            Log.d("AAAAAAAAAAAA","AAAAA                  " +act_state);
-                            Log.d("AAAAAAAAAAAA","AAAAA                  " +impState);
-                            Log.d("AAAAAAAAAAAA","AAAAA                  " +adv);
-                            Log.d("AAAAAAAAAAAA","AAAAA                  " +cos);
-*/
-                            ideaitem.set_id(_id);
-                            ideaitem.setName(short_name);
-                            ideaitem.setActState(act_state);
-                            ideaitem.setImpState(impState);
-                            ideaitem.setAdv(adv);
-                            ideaitem.setCosts(cos);
-                            ideaitem.setTime(time);
-                            ideaitem.setCreator(creator);
-                            ideaitem.setFileBefore(file_before);
-                            ideaitem.setFileAfter(file_after);
-                            ideaitem.setPriority(priority);
-                            ideaitem.setReceiver(receiver);
-
-                            ideaItems.add(ideaitem);
-                        }
-                       /* String d =
-                        Log.d("AAAAAAAAAAAA","AAAAA                  " +short_name);
-                        Log.d("AAAAAAAAAAAA","AAAAA                  " +act_state);
-                        Log.d("AAAAAAAAAAAA","AAAAA                  " +impState);*/
-
-
-                        setListAdapter(new IdeaAdapter(getActivity(), 0, ideaItems));
-                    } else {
-
-                        // Error occurred in registration. Get the error
-                        // message
-                        String errorMsg = jObj.getString("error_msg");
-                        //Toast.makeText(getApplicationContext(), errorMsg, Toast.LENGTH_LONG).show();
-                        Log.d(TAG, "REGISTRATION ERROR: " + errorMsg);
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        }, new Response.ErrorListener() {
-
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e(TAG, "Registration Error: " + error.getMessage());
-                //Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
-                //hideDialog();
-            }
-        }) {
-
-                /*@Override
-                protected Map<String, String> getParams() {
-                    // Posting params to register url
-                    Map<String, String> params = new HashMap<String, String>();
-                    params.put("short_name", short_name);
-                    params.put("actual_state", actual_state);
-                    params.put("improved_state", improved_state);
-                    params.put("advantages",advantages);
-                    params.put("costs",costs);
-                    return params;
-                }*/
-
-        };
-
-        // Adding request to request queue
-        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
-    }
 
     /**
      * Otestovanie ci bolo implementovane rozhranie OnNewItemAddedListener

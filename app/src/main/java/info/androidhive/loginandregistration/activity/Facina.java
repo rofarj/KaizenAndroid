@@ -119,6 +119,7 @@ public class Facina extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_facina);
         nameEditText = (EditText) findViewById(R.id.editText);
+        //nameEditText.setHint("abrakadabra");
         actualStateEditText1 = (EditText) findViewById(R.id.editText1);
         improvedStateEditText3 = (EditText) findViewById(R.id.editText3);
         advantagesEditText4 = (EditText) findViewById(R.id.editText4);
