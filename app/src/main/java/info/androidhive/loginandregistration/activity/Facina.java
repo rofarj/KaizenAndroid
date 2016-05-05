@@ -33,6 +33,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.OutputStream;
 import java.math.BigInteger;
 import java.net.HttpURLConnection;
@@ -67,6 +68,14 @@ import info.androidhive.loginandregistration.app.AppController;
 import info.androidhive.loginandregistration.helper.SQLiteHandler;
 import info.androidhive.loginandregistration.helper.SessionManager;
 
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Image;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfWriter;
+
 public class Facina extends AppCompatActivity {
 
     private Button btnSend;
@@ -76,7 +85,7 @@ public class Facina extends AppCompatActivity {
     private ProgressDialog pDialog;
     private SessionManager session;
     private SQLiteHandler db;
-    private Button btnTakePhotoOld;
+    private Button mail;
     private Button btnTakePhotoNew;
     private ImageView iv;
     private ImageView iv2;
@@ -126,6 +135,7 @@ public class Facina extends AppCompatActivity {
         costsEditText2 = (EditText) findViewById(R.id.editText2);
         receiverEditText5 = (EditText) findViewById(R.id.editText5);
         btnSend = (Button) findViewById(R.id.button);
+        mail = (Button) findViewById(R.id.button2);
         image = (ImageView) findViewById(R.id.imageView);
         image2 = (ImageView) findViewById(R.id.imageView2);
         radioPrioritaGroup = (RadioGroup) findViewById(R.id.radioPriorita);
@@ -316,6 +326,75 @@ public class Facina extends AppCompatActivity {
 
             }
         });
+
+        mail.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                name = nameEditText.getText().toString();
+                actual_state = actualStateEditText1.getText().toString();
+                improved_state = improvedStateEditText3.getText().toString();
+                advantages = advantagesEditText4.getText().toString();
+                costs = costsEditText2.getText().toString();
+                receiver = receiverEditText5.getText().toString();
+
+                int selectedId2 = radioPrioritaGroup.getCheckedRadioButtonId();
+                radioPrioritaButton = (RadioButton) findViewById(selectedId2);
+
+                String DEST =  Environment.getExternalStorageDirectory() + "/simpleTable.pdf";
+                File file = new File(DEST);
+                file.getParentFile().mkdirs();
+                try {
+                    //createPdf(DEST);
+                    Document document = new Document();
+                    PdfWriter.getInstance(document, new FileOutputStream(DEST));
+                    document.open();
+                    PdfPTable table = new PdfPTable(2);
+                    table.addCell("CEIT KAIZEN");
+                    table.addCell("");
+                    table.addCell("Name od Kaizen: ");
+                    table.addCell(name);
+                    table.addCell("Actual state: ");
+                    table.addCell(actual_state);
+                    table.addCell("Picture of the actual state: ");
+                    Image img = Image.getInstance(Environment.getExternalStorageDirectory() + "/" +fileName1);
+                    PdfPCell cell = new PdfPCell(img, true);
+                    table.addCell(cell);
+                    table.addCell("Improved state: ");
+                    table.addCell(improved_state);
+                    table.addCell("Picture of the improved state: ");
+                    Image img2 = Image.getInstance(Environment.getExternalStorageDirectory() + "/" +fileName2);
+                    PdfPCell cell2 = new PdfPCell(img2, true);
+                    table.addCell(cell2);
+                    table.addCell("Advantages: ");
+                    table.addCell(advantages);
+                    table.addCell("Costs: ");
+                    table.addCell(costs);
+                    table.addCell("Receiver: ");
+                    table.addCell(receiver);
+                    table.addCell("Priority: ");
+                    table.addCell(radioPrioritaButton.getText().toString());
+                    document.add(table);
+                    document.close();
+                }
+                catch(IOException e)
+                {
+                }
+                catch(DocumentException e)
+                {
+                }
+
+                Intent intent = new Intent(Facina.this, MailActivity.class);
+                intent.putExtra("name", name);
+                intent.putExtra("actual_state", actual_state);
+                intent.putExtra("improved_state", improved_state);
+                intent.putExtra("advantages", advantages);
+                intent.putExtra("costs", costs);
+                intent.putExtra("receiver", receiver);
+                startActivity(intent);
+            }
+        });
+
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

@@ -24,6 +24,7 @@ dependencies {
     compile 'com.mcxiaoke.volley:library-aar:1.0.0'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.android.support:support-v4:19.1.0'
+    compile 'com.itextpdf:itextg:5.5.9'
 }
 repositories {
     mavenCentral() // jcenter() works as well because it pulls from Maven Central

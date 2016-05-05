@@ -241,5 +241,19 @@
         android:textColor="@color/nadpisy"
 
         />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:text="@string/taskAddButton2"
+
+
+            android:background="@color/btn_login_bg"
+
+            android:textColor="@color/nadpisy"
+
+            />
 </LinearLayout>
 </ScrollView>

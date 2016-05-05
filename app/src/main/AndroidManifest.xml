@@ -52,7 +52,6 @@
             android:name=".activity.IdeaDetail"
             android:label="@string/title_activity_idea_detail"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".activity.MyIdeaDetail"
             android:label="MyIdeaDetail"
@@ -67,8 +66,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.Facina"
-            android:screenOrientation="portrait"
             android:label="@string/title_activity_facina"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.UserDetail"
@@ -77,10 +76,14 @@
         <activity
             android:name=".activity.ListOfUsers"
             android:label="@string/title_activity_list_of_users"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.ListOfMyIdeas"
             android:label="ListOfMyIdeas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.MailActivity"
+            android:label="@string/title_activity_mail"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

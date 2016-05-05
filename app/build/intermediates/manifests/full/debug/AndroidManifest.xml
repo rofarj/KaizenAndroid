@@ -81,6 +81,10 @@
             android:name="info.androidhive.loginandregistration.activity.ListOfMyIdeas"
             android:label="ListOfMyIdeas"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="info.androidhive.loginandregistration.activity.MailActivity"
+            android:label="@string/title_activity_mail"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
