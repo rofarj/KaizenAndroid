@@ -10,6 +10,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -144,6 +145,7 @@ public class LoginActivity extends Activity {
                         String age = user.getString("age");
                         String user_type = user.getString("user_type");
 
+                        Log.d("JJJJJJJJJJJJJJJ", "EMAIL: " + email);
                         Log.d("JJJJJJJJJJJJJJJ", "COMPANY: " + company);
                         Log.d("JJJJJJJJJJJJJJJ", "PHONE: " + phone);
                         Log.d("JJJJJJJJJJJJJJJ", "AGE: " + age);
@@ -205,5 +207,20 @@ public class LoginActivity extends Activity {
     private void hideDialog() {
         if (pDialog.isShowing())
             pDialog.dismiss();
+    }
+
+    /**
+     * Po stlaceni back button-u v tejto aktivite sa aplikacia ukonci
+     */
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

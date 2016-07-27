@@ -18,11 +18,11 @@
 
     <ImageView
         android:layout_width="200dp"
-        android:layout_height="200px"
+        android:layout_height="200dp"
         android:id="@+id/imageView2"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="200px"
-        android:src="@drawable/ceitlogo"/>
+        android:src="@drawable/ceit_kaizen3"/>
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -84,4 +84,4 @@
     </LinearLayout>
 
 </LinearLayout>
-    </ScrollView><!-- From: file:/C:/Users/Palo/AndroidStudioProjects/AndroidLoginAndRegistration/app/src/main/res/layout/activity_login.xml -->
+    </ScrollView>

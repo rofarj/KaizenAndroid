@@ -1,12 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
+<items version="2" />
 
-    <item
-        jar="C:\Users\Palo\.gradle\caches\modules-2\files-2.1\com.itextpdf\itextg\5.5.9\3580383b2c7db8fa2fee1ffbe1993017a9ea296e\itextg-5.5.9.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="3580383b2c7db8fa2fee1ffbe1993017a9ea296e">
-        <dex dex="C:\Users\Palo\AndroidStudioProjects\AndroidLoginAndRegistration\app\build\intermediates\pre-dexed\debug\itextg-5.5.9-8826fd22f57ee8b648ee993bc91431e6c63e58f3.jar" />
-    </item>
-
-</items>

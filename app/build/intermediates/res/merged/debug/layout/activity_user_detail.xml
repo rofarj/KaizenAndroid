@@ -6,4 +6,4 @@
     tools:context="info.androidhive.loginandregistration.activity.UserDetail"
     tools:ignore="MergeRootFrame" >
 
-</FrameLayout><!-- From: file:/C:/Users/Palo/AndroidStudioProjects/AndroidLoginAndRegistration/app/src/main/res/layout/activity_user_detail.xml -->
+</FrameLayout>

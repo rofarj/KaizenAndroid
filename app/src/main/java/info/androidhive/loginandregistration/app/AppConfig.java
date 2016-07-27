@@ -25,4 +25,6 @@ public class AppConfig {
 
 	public static String DELETE_USER = "http://zims.ceitgroup.eu/kaizen/android_login_api/delete_user.php";
 
+	public static String SPINNERS = "http://zims.ceitgroup.eu/kaizen/android_login_api/spinners.php";
+
 }

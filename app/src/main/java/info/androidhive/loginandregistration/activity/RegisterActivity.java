@@ -95,7 +95,7 @@ public class RegisterActivity extends Activity {
                 if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty() && !surname.isEmpty() && !company.isEmpty() && !age.isEmpty() && !phone.isEmpty()) {
                     registerUser(name, email, password, surname, company, phone, age);
                 } else {
-                    Toast.makeText(getApplicationContext(), "Please enter your details!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Musia byť vyplnené všetky polia!", Toast.LENGTH_LONG).show();
                 }
             }
         });

@@ -1,17 +1,13 @@
 package info.androidhive.loginandregistration.activity;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
+import android.widget.ImageButton;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import info.androidhive.loginandregistration.R;
@@ -26,7 +22,7 @@ public class User extends Activity implements View.OnClickListener {
     private SessionManager session;
     private String btn;
     private String type;
-    private Button button;
+    private ImageButton button;
     String creator;
     String name;
     String actual_state;
@@ -40,12 +36,12 @@ public class User extends Activity implements View.OnClickListener {
 
 
 
-        ((Button)findViewById(R.id.add_item)).setOnClickListener(this);
-        ((Button)findViewById(R.id.view_items)).setOnClickListener(this);
-        ((Button)findViewById(R.id.view_users)).setOnClickListener(this);
-        ((Button)findViewById(R.id.my_ideas)).setOnClickListener(this);
-        ((Button)findViewById(R.id.logout)).setOnClickListener(this);
-        button = (Button)findViewById(R.id.view_users);
+        ((ImageButton)findViewById(R.id.add_item)).setOnClickListener(this);
+        ((ImageButton)findViewById(R.id.view_items)).setOnClickListener(this);
+        ((ImageButton)findViewById(R.id.view_users)).setOnClickListener(this);
+        //((Button)findViewById(R.id.my_ideas)).setOnClickListener(this);
+        ((ImageButton)findViewById(R.id.logout)).setOnClickListener(this);
+        button = (ImageButton)findViewById(R.id.view_users);
 
 
         db = new SQLiteHandler(getApplicationContext());
@@ -58,11 +54,11 @@ public class User extends Activity implements View.OnClickListener {
 
         String name = userr.get("name");
         String user = userr.get("email");
-        type = userr.get("user_type");
+        //type = userr.get("user_type");
         String userID = userr.get("uid");
         String age = userr.get("age");
 
-        Log.d("USER ACTIVITY", "TYPE " + type);
+        //Log.d("USER ACTIVITY", "TYPE " + type);
         Log.d("USER ACTIVITY", "NAME " + name);
         Log.d("USER ACTIVITY", "USER " + user);
         Log.d("USER ACTIVITY", "ID " + userID);
@@ -80,9 +76,9 @@ public class User extends Activity implements View.OnClickListener {
         Log.d("USER ACTIVITY", "improved_state   " + improved_state);
         Log.d("USER ACTIVITY", "advantages   " + advantages);
 
-        if(type.equals("0")) {
-            button.setVisibility(View.GONE);
-        }
+        //if(type.equals("0")) {
+         //   button.setVisibility(View.GONE);
+       //}
     }
 
     @Override
@@ -91,7 +87,7 @@ public class User extends Activity implements View.OnClickListener {
 
         switch (v.getId()) {
             case R.id.add_item:
-                Intent intent = new Intent(this, Facina.class);
+                Intent intent = new Intent(this, FirstNewIdeaActivity.class);
                 startActivity(intent);
                 break;
             case R.id.view_items:
@@ -103,11 +99,11 @@ public class User extends Activity implements View.OnClickListener {
                 Intent intent3 = new Intent(this, ListOfUsers.class);
                 startActivity(intent3);
                 break;
-            case R.id.my_ideas:
+            /*case R.id.my_ideas:
                 btn = "B";
                 Intent intent4 = new Intent(this, ListOfMyIdeas.class);
                 startActivity(intent4);
-                break;
+                break;*/
             case R.id.logout:
                 logoutUser();
                 break;

@@ -19,4 +19,4 @@
         android:layout_weight="5">
     </FrameLayout>
 
-</LinearLayout><!-- From: file:/C:/Users/Palo/AndroidStudioProjects/AndroidLoginAndRegistration/app/src/main/res/layout-land/activity_list_of_ideas.xml -->
+</LinearLayout>

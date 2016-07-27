@@ -19,6 +19,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="info.androidhive.loginandregistration.activity.LoginActivity"
@@ -35,56 +36,73 @@
             android:name="info.androidhive.loginandregistration.activity.RegisterActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="info.androidhive.loginandregistration.activity.MainActivity"
             android:label="@string/app_name"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
         <activity
             android:name="info.androidhive.loginandregistration.activity.Main2Activity"
             android:label="@string/title_activity_main2"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="info.androidhive.loginandregistration.activity.NewIdea"
             android:label="@string/title_activity_new_idea"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="info.androidhive.loginandregistration.activity.IdeaDetail"
             android:label="@string/title_activity_idea_detail"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="info.androidhive.loginandregistration.activity.MyIdeaDetail"
             android:label="MyIdeaDetail"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="info.androidhive.loginandregistration.activity.ListOfIdeas"
             android:label="@string/title_activity_list_of_ideas"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="info.androidhive.loginandregistration.activity.User"
             android:label="@string/title_activity_user"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="info.androidhive.loginandregistration.activity.Facina"
+            android:name="info.androidhive.loginandregistration.activity.FirstNewIdeaActivity"
             android:label="@string/title_activity_facina"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="info.androidhive.loginandregistration.activity.UserDetail"
             android:label="@string/title_activity_user_detail"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="info.androidhive.loginandregistration.activity.ListOfUsers"
             android:label="@string/title_activity_list_of_users"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="info.androidhive.loginandregistration.activity.ListOfMyIdeas"
             android:label="ListOfMyIdeas"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="info.androidhive.loginandregistration.activity.MailActivity"
             android:label="@string/title_activity_mail"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="info.androidhive.loginandregistration.activity.SecondNewIdeaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

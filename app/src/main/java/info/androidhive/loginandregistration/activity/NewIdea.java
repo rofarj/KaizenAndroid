@@ -96,12 +96,12 @@ public class NewIdea extends Activity {
 
         //final MyDatabaseHelper db = new MyDatabaseHelper(this);
 
-        nameEditText = (EditText) findViewById(R.id.editText);
-        actualStateEditText1 = (EditText) findViewById(R.id.editText1);
+        //nameEditText = (EditText) findViewById(R.id.editTextTest);
+        /*actualStateEditText1 = (EditText) findViewById(R.id.editText1);
         improvedStateEditText3 = (EditText) findViewById(R.id.editText3);
         advantagesEditText4 = (EditText) findViewById(R.id.editText4);
         costsEditText2 = (EditText) findViewById(R.id.editText2);
-        btnSend = (Button) findViewById(R.id.button);
+        btnSend = (Button) findViewById(R.id.button);*/
 /*
         btnTakePhotoOld = (Button) findViewById(R.id.button2);
         btnTakePhotoNew = (Button) findViewById(R.id.button3);
@@ -137,12 +137,11 @@ public class NewIdea extends Activity {
         });
 
 
-        btnSend.setOnClickListener(new View.OnClickListener() {
+        /*btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 
-                /* Edit texty */
                 name = nameEditText.getText().toString();
                 actual_state = actualStateEditText1.getText().toString();
                 improved_state = improvedStateEditText3.getText().toString();
@@ -157,14 +156,14 @@ public class NewIdea extends Activity {
                 }
 
 
-                /* ulozenie zaznamu do databazy */
+
                 //db.createRecords(nazov, kategoria,datum, priorita,popis);
 
 
                 Intent intent2 = new Intent(v.getContext(), User.class);
                 startActivity(intent2);
             }
-        });
+        });*/
     }
 
     /**

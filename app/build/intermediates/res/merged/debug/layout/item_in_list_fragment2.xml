@@ -149,4 +149,4 @@
             android:text="@string/taskDeleteButton" />
             -->
     </LinearLayout>
-</ScrollView><!-- From: file:/C:/Users/Palo/AndroidStudioProjects/AndroidLoginAndRegistration/app/src/main/res/layout/item_in_list_fragment2.xml -->
+</ScrollView>
