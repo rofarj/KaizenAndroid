@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/scrollView1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,8 +7,8 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@color/white"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_login"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="10dp" >
@@ -21,7 +19,7 @@
         android:layout_height="200dp"
         android:id="@+id/imageView2"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="200px"
+        android:layout_marginBottom="50dp"
         android:src="@drawable/ceit_kaizen3"/>
 
     <LinearLayout
@@ -64,10 +62,10 @@
             android:id="@+id/btnLogin"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
+            android:layout_marginTop="50dip"
             android:background="@color/btn_login_bg"
             android:text="@string/btn_login"
-            android:textColor="@color/nadpisy" />
+            android:textColor="@color/btn_login_text" />
 
         <!-- Link to Login Screen -->
 
@@ -75,12 +73,12 @@
             android:id="@+id/btnLinkToRegisterScreen"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dip"
+            android:layout_marginTop="10dip"
             android:background="@color/btn_login_bg"
             android:text="@string/btn_link_to_register"
             android:textAllCaps="false"
-            android:textColor="@color/nadpisy"
-            android:textSize="15dp" />
+            android:textColor="@color/btn_login_text"
+            android:textSize="15sp" />
     </LinearLayout>
 
 </LinearLayout>

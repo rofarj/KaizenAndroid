@@ -2,20 +2,26 @@
 <resources>
 
     <color name="text_color">#FFFFFF</color>
-    <color name="bg_login">#77BC1F</color>
-    <color name="bg_register">#2e3237</color>
+    <color name="bg_login">#FFFFFF</color>
+    <color name="bg_register">#FFFFFF</color>
     <color name="bg_main">#428bca</color>
     <color name="white">#ffffff</color>
     <color name="input_login">#222222</color>
     <color name="input_login_hint">#999999</color>
-    <color name="input_register">#888888</color>
+    <color name="input_register">#222222</color>
     <color name="input_register_bg">#3b4148</color>
-    <color name="input_register_hint">#5e6266</color>
-    <color name="btn_login">#26ae90</color>
+    <color name="input_register_hint">#999999</color>
+    <color name="btn_login">#515151</color>
+    <color name="btn_login_text">#515151</color>
     <color name="btn_login_bg">#eceef1</color>
+    <color name="btn_register">#515151</color>
+    <color name="btn_register_text">#515151</color>
+    <color name="btn_register_bg">#eceef1</color>
     <color name="lbl_name">#333333</color>
     <color name="btn_logut_bg">#ff6861</color>
-
+    <color name="btn_bg">#3e6522</color>
+    <color name="ceit_green">#75b343</color>
+    <color name="item_even_bg">#eceef1</color>
 
     <color name="nadpisy">#515151</color>
     <color name="riadky">#C8C8C8</color>

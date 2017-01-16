@@ -1,14 +1,14 @@
 [
     {
-        "merged": "C:\\Users\\janko\\AndroidStudioProjects\\KaizenAndroid_2\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\list_of_my_ideas.xml",
-        "source": "C:\\Users\\janko\\AndroidStudioProjects\\KaizenAndroid_2\\app\\src\\main\\res\\layout-land\\list_of_my_ideas.xml"
+        "merged": "C:\\Users\\zarofarj\\AndroidStudioProjects\\KaizenSystem\\Android\\KaizenApp\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\activity_list_of_ideas.xml",
+        "source": "C:\\Users\\zarofarj\\AndroidStudioProjects\\KaizenSystem\\Android\\KaizenApp\\app\\src\\main\\res\\layout-land\\activity_list_of_ideas.xml"
     },
     {
-        "merged": "C:\\Users\\janko\\AndroidStudioProjects\\KaizenAndroid_2\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\activity_list_of_ideas.xml",
-        "source": "C:\\Users\\janko\\AndroidStudioProjects\\KaizenAndroid_2\\app\\src\\main\\res\\layout-land\\activity_list_of_ideas.xml"
+        "merged": "C:\\Users\\zarofarj\\AndroidStudioProjects\\KaizenSystem\\Android\\KaizenApp\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\list_of_my_ideas.xml",
+        "source": "C:\\Users\\zarofarj\\AndroidStudioProjects\\KaizenSystem\\Android\\KaizenApp\\app\\src\\main\\res\\layout-land\\list_of_my_ideas.xml"
     },
     {
-        "merged": "C:\\Users\\janko\\AndroidStudioProjects\\KaizenAndroid_2\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\activity_list_of_users.xml",
-        "source": "C:\\Users\\janko\\AndroidStudioProjects\\KaizenAndroid_2\\app\\src\\main\\res\\layout-land\\activity_list_of_users.xml"
+        "merged": "C:\\Users\\zarofarj\\AndroidStudioProjects\\KaizenSystem\\Android\\KaizenApp\\app\\build\\intermediates\\res\\merged\\debug\\layout-land\\activity_list_of_users.xml",
+        "source": "C:\\Users\\zarofarj\\AndroidStudioProjects\\KaizenSystem\\Android\\KaizenApp\\app\\src\\main\\res\\layout-land\\activity_list_of_users.xml"
     }
 ]

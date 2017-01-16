@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="info.androidhive.loginandregistration"
+    package="eu.ceitgroup.AndroidKaizen"
     android:versionCode="1"
     android:versionName="1.0">
 
@@ -13,93 +13,80 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
-        android:name=".app.AppController"
+        android:name="eu.ceitgroup.AndroidKaizen.app.AppController"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/kaizen_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
         android:largeHeap="true">
+
         <activity
-            android:name=".activity.LoginActivity"
+            android:name="eu.ceitgroup.AndroidKaizen.activity.LoginActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".activity.RegisterActivity"
+            android:name="eu.ceitgroup.AndroidKaizen.activity.RegisterActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".activity.MainActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTop" />
-        <activity
-            android:name=".activity.Main2Activity"
-            android:label="@string/title_activity_main2"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activity.NewIdea"
-            android:label="@string/title_activity_new_idea"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activity.IdeaDetail"
+            android:name="eu.ceitgroup.AndroidKaizen.activity.IdeaDetail"
             android:label="@string/title_activity_idea_detail"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.MyIdeaDetail"
+            android:name="eu.ceitgroup.AndroidKaizen.activity.MyIdeaDetail"
             android:label="MyIdeaDetail"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.ListOfIdeas"
+            android:name="eu.ceitgroup.AndroidKaizen.activity.ListOfIdeas"
             android:label="@string/title_activity_list_of_ideas"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.User"
+            android:name="eu.ceitgroup.AndroidKaizen.activity.MainActivity"
             android:label="@string/title_activity_user"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.FirstNewIdeaActivity"
+            android:name="eu.ceitgroup.AndroidKaizen.activity.DefineProblem"
             android:label="@string/title_activity_facina"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.UserDetail"
+            android:name="eu.ceitgroup.AndroidKaizen.activity.UserDetail"
             android:label="@string/title_activity_user_detail"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.ListOfUsers"
+            android:name="eu.ceitgroup.AndroidKaizen.activity.ListOfUsers"
             android:label="@string/title_activity_list_of_users"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.ListOfMyIdeas"
+            android:name="eu.ceitgroup.AndroidKaizen.activity.ListOfMyIdeas"
             android:label="ListOfMyIdeas"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.MailActivity"
+            android:name="eu.ceitgroup.AndroidKaizen.activity.MailActivity"
             android:label="@string/title_activity_mail"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.SecondNewIdeaActivity"
+            android:name="eu.ceitgroup.AndroidKaizen.activity.DefineIdea"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>

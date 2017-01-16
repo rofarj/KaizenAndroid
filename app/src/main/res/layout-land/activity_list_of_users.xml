@@ -6,7 +6,7 @@
     tools:context=".MainActivity"
     android:weightSum="8">
 
-    <fragment android:name="info.androidhive.loginandregistration.activity.ListOfUsersFragment"
+    <fragment android:name="eu.ceitgroup.AndroidKaizen.activity.ListOfUsersFragment"
         android:id="@+id/TodoListFragment"
         android:layout_width="0px"
         android:layout_height="match_parent"

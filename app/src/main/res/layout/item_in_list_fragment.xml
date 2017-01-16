@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/scrollView1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,23 +7,31 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:orientation="vertical"
     android:background="#ffffff">
 
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:id="@+id/imageView5"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/ceit_kaizen3"
+        android:layout_weight="1" />
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:orientation="horizontal"
-        android:background="#8FFF79">
+        android:background="@color/item_even_bg">
 
         <TextView
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="fill_parent"
-            android:layout_height="100px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:textColor="@color/nadpisy"
             android:text="@string/taskNameFragment"/>
 
@@ -33,16 +39,16 @@
             android:id="@+id/nazovUlohy"
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:textColor="@color/nadpisy"
-            android:layout_height="200px" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginTop="20dip"
         android:orientation="horizontal" >
 
@@ -50,9 +56,9 @@
         <TextView
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:textColor="@color/nadpisy"
-            android:layout_height="200px"
+            android:layout_height="match_parent"
             android:text="@string/taskCathegoryFragment"/>
 
         <TextView
@@ -60,8 +66,8 @@
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/nadpisy"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
 
     </LinearLayout>
@@ -71,8 +77,8 @@
 
 
     <ImageView
-        android:layout_width="800px"
-        android:layout_height="800px"
+        android:layout_width="800dp"
+        android:layout_height="400dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dip"
         android:id="@+id/img"/>
@@ -85,16 +91,16 @@
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:orientation="horizontal"
         android:layout_marginTop="20dip"
-        android:background="#8FFF79">
+        android:background="@color/item_even_bg">
 
         <TextView
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="fill_parent"
-            android:layout_height="200px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:textColor="@color/nadpisy"
             android:text="@string/taskDateFragment"/>
 
@@ -102,9 +108,9 @@
             android:id="@+id/datumUlohy"
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:textColor="@color/nadpisy"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
@@ -112,28 +118,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#8FFF79">
+        android:background="@color/item_even_bg">
     <ImageView
-        android:layout_width="800px"
-        android:layout_height="800px"
+        android:layout_width="800dp"
+        android:layout_height="400dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dip"
-        android:background="#8FFF79"
+        android:background="@color/item_even_bg"
         android:id="@+id/img2"
         android:layout_marginBottom="20dp"/>
         </LinearLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginTop="20dip"
         android:orientation="horizontal">
 
         <TextView
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="fill_parent"
-            android:layout_height="200px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:textColor="@color/nadpisy"
             android:text=" Advantages"/>
 
@@ -141,24 +147,24 @@
             android:id="@+id/prioritaUlohy"
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:textColor="@color/nadpisy"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:orientation="horizontal"
         android:layout_marginTop="20dip"
-        android:background="#8FFF79">
+        android:background="@color/item_even_bg">
 
         <TextView
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="fill_parent"
-            android:layout_height="200px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:textColor="@color/nadpisy"
             android:text="@string/taskDescriptionFragment"/>
 
@@ -166,15 +172,15 @@
             android:id="@+id/popisUlohy"
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:textColor="@color/nadpisy"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:orientation="horizontal"
         android:layout_marginTop="20dip"
         android:background="#FFFFFF">
@@ -182,8 +188,8 @@
         <TextView
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="fill_parent"
-            android:layout_height="200px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:textColor="@color/nadpisy"
             android:text=" Priority:"/>
 
@@ -191,24 +197,24 @@
             android:id="@+id/priorita"
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:textColor="@color/nadpisy"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:orientation="horizontal"
         android:layout_marginTop="20dip"
-        android:background="#8FFF79">
+        android:background="@color/item_even_bg">
 
         <TextView
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="fill_parent"
-            android:layout_height="200px"
+            android:layout_height="match_parent"
             android:textColor="@color/nadpisy"
             android:text=" Receiver:"/>
 
@@ -216,11 +222,13 @@
             android:id="@+id/receiver"
             android:layout_weight="1"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:textColor="@color/nadpisy"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
+
+
 
 
     <!--
